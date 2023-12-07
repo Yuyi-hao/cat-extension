@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Cute pet",
+    "description": "Put a pet gif at the left bottom corner",
+    "author": "Yuyi Hao",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts":[
+        {
+            "js": ["scripts/content.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "permissions":[
+        "activeTab"
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": ["<all_urls>"],
+            "resources": ["style/*", "images/*"]
+        }
+    ]
+}
