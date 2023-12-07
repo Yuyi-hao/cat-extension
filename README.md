@@ -9,15 +9,10 @@ The Cute Pet Chrome Extension is a simple extension that injects a cute pet gif 
 
 ## Installation
 
-### Option first
 1. Download or clone this repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" in the top-right corner.
 4. Click "Load unpacked" and select the folder containing the extension files.
-
-### Option two
-Download from chrome web store: [link will be here soon]()
-
 
 
 ## Usage
@@ -26,6 +21,9 @@ Once the extension is installed:
 
 - Open any webpage, and you should see a cute pet gif at the left bottom corner.
 - The pet gif will change automatically every 5 seconds.
+  
+## DEMO 
+![](images/demo/demo_ss.png)
 
 ## Folder Structure
 
