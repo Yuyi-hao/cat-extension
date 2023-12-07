@@ -1,13 +1,13 @@
 const choices = [
-    "busy",
+    "bomp",
+    "chilling",
     "eating-together",
     "eating",
-    "hi",
     "jumping",
-    "sipping",
-    "sitting",
-    "slurping",
-    "unicorn"
+    "looking",
+    "magic",
+    "reading-witch",
+    "unicorn-chill"
 ]
 
 const body = document.querySelector("body");
@@ -24,3 +24,17 @@ cssLink.rel = "stylesheet";
 cssLink.type = "text/css";
 cssLink.href = chrome.runtime.getURL("style/img_style.css");
 head.appendChild(cssLink);
+
+chrome.runtime.onMessage.addListener((message, sender) => {
+    if(message.state === "ON"){
+        body.appendChild(img_ele);
+    }
+    else if(message.state === "OFF"){
+        img_ele.remove();
+    }
+})
+
+setInterval(() => {
+    const choice = Math.floor(Math.random()*choices.length)
+    img_ele.src = chrome.runtime.getURL(`images/pusheen-cat/${choices[choice]}.gif`) 
+}, 10000);

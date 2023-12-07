@@ -5,7 +5,7 @@
     "author": "Yuyi Hao",
     "version": "1.0",
     "action": {
-        "default_popup": "popup.html"
+        "default_title": "Toggle on and off"
     },
     "content_scripts":[
         {
@@ -14,8 +14,12 @@
         }
     ],
     "permissions":[
-        "activeTab"
+        "activeTab",
+        "scripting"
     ],
+    "background":{
+        "service_worker": "scripts/background.js"
+    },
     "web_accessible_resources": [
         {
             "matches": ["<all_urls>"],
