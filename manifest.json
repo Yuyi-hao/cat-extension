@@ -7,6 +7,12 @@
     "action": {
         "default_title": "Toggle on and off"
     },
+    "icons":{
+        "16": "images/logo/logo_16x16.jpg",
+        "32": "images/logo/logo_32x32.jpg",
+        "48": "images/logo/logo_48x48.jpg",
+        "128": "images/logo/logo_128x128.jpg"
+    },
     "content_scripts":[
         {
             "js": ["scripts/content.js"],
